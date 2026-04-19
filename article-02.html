@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大手地銀から金利1.6%で9割融資を引いた話｜東大卒会計士の不動産投資攻略書</title>
+<meta name="description" content="3億円の新築アパートに対して、大手地銀から金利1.6%・期間30年・借入2.7億円（9割融資）を引いた話。裏技ではなく、自己資金を貯めてきた結果として引けた融資の実例を解剖する。">
+<meta name="author" content="さとうみいた">
+
+<meta property="og:title" content="大手地銀から金利1.6%で9割融資を引いた話">
+<meta property="og:description" content="不動産投資は、自己資金ゲームです。10年かけて登ってきた信金→地銀→大手地銀の階段。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="大手地銀から金利1.6%で9割融資を引いた話">
+<meta name="twitter:description" content="不動産投資は、自己資金ゲームです。">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1613;
+    --paper: #f4efe6;
+    --paper-dark: #e8e0d0;
+    --paper-darker: #ddd2bd;
+    --accent: #8b2820;
+    --accent-soft: #c4502a;
+    --gold: #a88845;
+    --muted: #6b6357;
+    --rule: #2a221d;
+    --rule-soft: #c0b8a8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.9;
+    font-feature-settings: "palt";
+    font-size: 16px;
+  }
+
+  .mincho { font-family: 'Shippori Mincho', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* ─── TOP BAR ─── */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-left { display: flex; gap: 24px; align-items: center; }
+  .topbar-logo { font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 14px; letter-spacing: 0.2em; }
+  .topbar-meta { color: var(--muted); }
+  .topbar-nav { display: flex; gap: 20px; }
+  .topbar-nav a { color: var(--ink); text-decoration: none; }
+  .topbar-nav a:hover { color: var(--accent); }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* ─── ARTICLE HEAD ─── */
+  .article-head {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 32px;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 40px;
+  }
+  .article-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .article-chapter {
+    padding: 4px 10px;
+    background: var(--accent);
+    color: var(--paper);
+    letter-spacing: 0.15em;
+  }
+  .article-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .article-lead {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+  .article-author {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .author-info { font-size: 13px; }
+  .author-name { font-weight: 700; }
+  .author-title { color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; }
+
+  /* ─── TL;DR BOX ─── */
+  .tldr {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+  .tldr-inner {
+    background: var(--paper-dark);
+    border: 1px solid var(--rule);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .tldr-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .tldr-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .tldr-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tldr-list li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .tldr-list li::before {
+    content: "▪";
+    position: absolute;
+    left: 8px;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  /* ─── KEY DATA BOX ─── */
+  .key-data {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 32px;
+  }
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-cell {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-cell-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .data-cell-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .data-cell-value .unit { font-size: 13px; margin-left: 2px; color: var(--muted); font-weight: 400; }
+  .data-cell-value.accent { color: var(--accent); }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 32px;
+  }
+  .toc-inner {
+    background: var(--paper);
+    border-left: 3px solid var(--accent);
+    padding: 20px 28px;
+  }
+  .toc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .toc-list { list-style: none; padding: 0; }
+  .toc-list li {
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed var(--rule-soft);
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── ARTICLE BODY ─── */
+  .article-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .article-body h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 80px 0 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .article-body h2::before {
+    content: attr(data-num);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .article-body h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .article-body p {
+    margin-bottom: 24px;
+    line-height: 2.0;
+  }
+  .article-body strong { font-weight: 700; background: linear-gradient(transparent 65%, rgba(139,40,32,0.15) 65%); }
+  .article-body a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--paper-dark);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin: 32px 0;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .callout-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .callout.warn { border-left-color: var(--accent); }
+  .callout.warn .callout-label { color: var(--accent); }
+
+  /* QUOTE BLOCK */
+  blockquote {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 32px 40px;
+    margin: 40px 0;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+  }
+  blockquote::before {
+    content: "「";
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 48px;
+    opacity: 0.3;
+    font-weight: 800;
+  }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 32px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--paper);
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    background: var(--paper-dark);
+    color: var(--muted);
+    border-bottom: 2px solid var(--rule);
+  }
+  td.num { font-family: 'JetBrains Mono', monospace; }
+
+  /* STEPS */
+  .steps { margin: 32px 0; counter-reset: step; }
+  .step {
+    padding: 20px 24px 20px 72px;
+    position: relative;
+    border: 1px solid var(--rule-soft);
+    margin-bottom: -1px;
+    background: var(--paper);
+  }
+  .step::before {
+    counter-increment: step;
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .step-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .step-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+
+  /* ─── RELATED ─── */
+  .related-section {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 32px;
+  }
+  .related-header {
+    border-top: 2px solid var(--rule);
+    padding-top: 40px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .related-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: 0.2em; }
+  .related-title { font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 800; }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .related-card {
+    background: var(--paper);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.2s;
+    display: block;
+  }
+  .related-card:hover { background: var(--paper-dark); }
+  .related-card-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 12px; }
+  .related-card-title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
+  .related-card-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+
+  /* ─── YOUTUBE LINK ─── */
+  .yt-link {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 32px;
+  }
+  .yt-link-inner {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .yt-link-inner:hover { background: var(--accent); }
+  .yt-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .yt-icon svg { width: 20px; height: 20px; fill: var(--paper); }
+  .yt-text { flex: 1; }
+  .yt-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; opacity: 0.7; margin-bottom: 4px; }
+  .yt-title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; }
+  .yt-arrow { font-size: 20px; opacity: 0.5; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 32px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 900px) {
+    .data-grid { grid-template-columns: repeat(2, 1fr); }
+    .related-grid { grid-template-columns: 1fr; }
+    .article-body h2 { font-size: 24px; }
+    blockquote { font-size: 18px; padding: 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="index.html" style="text-decoration:none;color:inherit;display:flex;gap:24px;align-items:center;">
+      <span class="topbar-logo">東大卒会計士の不動産投資攻略書</span>
+      <span class="topbar-meta mono">by さとうみいた / VOL.01 / 2026</span>
+    </a>
+  </div>
+  <div class="topbar-nav mono">
+    <a href="index.html#map">目次</a>
+    <a href="index.html#cases">事例</a>
+    <a href="#">著者</a>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb mono">
+  <a href="index.html">HOME</a><span class="sep">/</span>
+  <a href="#">CH.01 融資攻略</a><span class="sep">/</span>
+  <a href="#">実戦ケース</a><span class="sep">/</span>
+  <span>大手地銀9割融資</span>
+</div>
+
+<!-- ARTICLE HEAD -->
+<article>
+  <header class="article-head">
+    <div class="article-meta">
+      <span class="article-chapter">CH.01 融資攻略</span>
+      <span>ENTRY / 02</span>
+      <span>2026.04.19</span>
+      <span>読了 10分</span>
+    </div>
+    <h1 class="article-title mincho">大手地銀から金利1.6%で<br>9割融資を引いた話。</h1>
+    <p class="article-lead mincho">
+      3億円の新築アパートに対して、2.7億円。<br>
+      裏技ではなく、10年かけて登ってきた階段の先にある条件を、<br>
+      実例として開示する。
+    </p>
+    <div class="article-author">
+      <div class="author-avatar mincho">佐</div>
+      <div class="author-info">
+        <div class="author-name">さとうみいた</div>
+        <div class="author-title mono">東大卒 / 公認会計士 / 不動産投資歴10年</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <div class="tldr-inner">
+      <div class="tldr-label mono">TL;DR — 3分で要点</div>
+      <h2 class="tldr-title mincho">この記事の結論</h2>
+      <ul class="tldr-list">
+        <li><strong>不動産投資は「融資ゲーム」ではなく「自己資金ゲーム」</strong>。自己資金を貯められない人は、スタートラインに立てない。</li>
+        <li>銀行が本当に見ているのは、担保・返済能力・<strong>自己資金</strong>の3つ。自己資金は「お金を管理できる人間かどうか」の指標として効く。</li>
+        <li>最初から大手地銀には行けない。<strong>信金 → 地銀 → 大手地銀</strong>の階段を、実績で一段ずつ登る。</li>
+        <li>ノンバンク系は入口としてはアリだが、<strong>拡大には向かない</strong>。2〜3棟目で枠にぶつかる。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KEY DATA -->
+  <section class="key-data">
+    <div class="data-grid">
+      <div class="data-cell">
+        <div class="data-cell-label mono">物件総額</div>
+        <div class="data-cell-value mincho">3.0<span class="unit">億円</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">融資額</div>
+        <div class="data-cell-value mincho accent">2.7<span class="unit">億円 (9割)</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">金利</div>
+        <div class="data-cell-value mincho">1.6<span class="unit">%</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">期間</div>
+        <div class="data-cell-value mincho">30<span class="unit">年</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOC -->
+  <section class="toc">
+    <div class="toc-inner">
+      <div class="toc-label mono">目次</div>
+      <ul class="toc-list">
+        <li><a href="#s1"><span>01. 多くの人が勘違いしている「融資中心思考」</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s2"><span>02. 不動産投資で一番重要な能力は、節約して貯める力</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s3"><span>03. 自己資金の具体的な目安</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s4"><span>04. 銀行階段を一段ずつ登る</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s5"><span>05. ノンバンク系の位置づけ</span><span class="toc-num">02 min</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <div class="article-body">
+
+    <h2 id="s1" data-num="§ 01">多くの人が勘違いしている「融資中心思考」</h2>
+
+    <p>SNSで融資条件の話をすると、必ず「どうやって引いたんですか」「裏技を教えてください」という反応が来る。その時点で、質問している人は勘違いをしている。</p>
+
+    <p>多くの初心者が思い込んでいるのは、<strong>不動産投資は「融資をいかに引くかの勝負」</strong>だということ。もちろん融資は大事だ。しかし、その前提となるのは、自分自身にどれだけの自己資金があるか、ここなのだ。</p>
+
+    <div class="callout">
+      <div class="callout-label mono">POINT</div>
+      銀行は、担保・返済能力・<strong>自己資金</strong>の3つで判断する。この中で最も見落とされがちなのが自己資金だ。
+    </div>
+
+    <h3>銀行が自己資金を重視する理由</h3>
+
+    <p>銀行は、自己資金がしっかりある人を信用する。なぜなら、自己資金がある人は、<strong>節約して、コツコツ貯めてきた人</strong>だからだ。お金を管理できる人間にしか、銀行はお金を貸したくない。当たり前の話なのに、多くの人がこの本質を見落としている。</p>
+
+    <p>逆に言えば、<strong>自己資金を貯められない人は、そもそも不動産投資のスタートラインに立てない</strong>。この現実を、まず直視する必要がある。</p>
+
+    <h2 id="s2" data-num="§ 02">不動産投資で一番重要な能力は、節約して貯める力</h2>
+
+    <p>不動産投資を成功させる上で、一番重要な能力は何か。</p>
+
+    <p>それは、いい物件を見つける目でも、銀行と交渉する力でも、税金の知識でもない。<strong>節約して、自己資金を貯める力</strong>。これが全ての土台だ。</p>
+
+    <blockquote>
+      融資が付くのは、年収1000万円で金融資産ゼロの人ではなく、年収600万円でも金融資産2000万円を作った人のほうだ。
+    </blockquote>
+
+    <p>考えてみてほしい。年収1000万円あっても、全部使ってしまって金融資産がゼロの人。この人は銀行から見たら、信用できない人だ。収入があっても、それを管理できていないと判断される。</p>
+
+    <p>逆に、年収600万円でも、毎年200万円貯めて、10年で2000万円の金融資産を作った人。この人は、銀行から見たら信用できる人。両者を比べたとき、融資が付くのは後者のほうだ。</p>
+
+    <h2 id="s3" data-num="§ 03">自己資金の具体的な目安</h2>
+
+    <p>自己資金がまだ十分にないという人が、まずやるべきは物件探しではない。<strong>生活を見直して、自己資金を貯めること</strong>。これが最優先だ。</p>
+
+    <h3>最初の1棟を買うための目安</h3>
+
+    <p>最低でも<strong>物件価格の10〜20%の自己資金＋諸費用＋生活防衛資金</strong>。これは欲しい。</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>物件価格</th><th>自己資金の目安</th><th>諸費用の目安</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3,000万円</td><td class="num">500〜700万円</td><td class="num">200〜300万円</td></tr>
+          <tr><td>5,000万円</td><td class="num">800〜1,000万円</td><td class="num">350〜450万円</td></tr>
+          <tr><td>1億円</td><td class="num">1,500〜2,000万円</td><td class="num">700〜900万円</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>これが用意できない人は、物件を買うより先に、<strong>貯める期間</strong>に集中するべきだ。焦って買って、数年後に後悔する投資家を、私は何人も見てきた。</p>
+
+    <h2 id="s4" data-num="§ 04">銀行階段を一段ずつ登る</h2>
+
+    <p>自己資金が一定量たまってきたら、次のステップ。よく聞かれるのが「どの銀行に行けばいいですか」という質問だ。</p>
+
+    <p>結論を言うと、<strong>最初から大手地銀や大手銀行に行く必要はない</strong>。というか、そもそも相手にしてもらえない。</p>
+
+    <div class="callout">
+      <div class="callout-label mono">POINT</div>
+      不動産投資は、<strong>物件ありきで、自分の属性に合った金融機関との取引を探していく</strong>ゲーム。物件が先、銀行は後だ。
+    </div>
+
+    <h3>信金 → 地銀 → 大手地銀の階段</h3>
+
+    <p>自分の属性がまだ育っていない段階なら、最初に付き合うべきは<strong>信用金庫</strong>だ。信金は地域密着で、融資判断が柔軟な面がある。属性が完璧じゃなくても、物件が地元にあり、事業として成立していれば、融資を検討してくれる可能性がある。</p>
+
+    <p>私自身も、最初は信用金庫との取引から始めた。そこで実績を積み、返済を続け、金融資産を貯めていった。そうしているうちに、徐々に<strong>地方銀行との取引に広げる</strong>ことができるようになった。そしてさらに規模を拡大する中で、今は大手地銀から金利1.6%・9割融資・30年という条件を引けるようになった。</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-title mincho">STEP 1：信用金庫で実績を作る</div>
+        <div class="step-desc">
+          地域密着型の信金は、属性が完璧でなくても話を聞いてくれることが多い。ここで1棟目を買い、返済実績を積む。これが次の階段への登録証になる。
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-title mincho">STEP 2：地方銀行との取引を開拓</div>
+        <div class="step-desc">
+          信金での実績を持って、地銀に打診する。融資額・期間・金利すべての条件が一段階改善される。複数物件を持つなら地銀が軸になる。
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-title mincho">STEP 3：大手地銀で9割融資を引く</div>
+        <div class="step-desc">
+          属性と実績が一定ラインを超えると、大手地銀が「借りてください」と前のめりに来るようになる。ここまで10年。一朝一夕では辿り着けない。
+        </div>
+      </div>
+    </div>
+
+    <p>いきなり大手地銀に行っても、実績のない人は相手にされない。<strong>まず信用金庫から始めて、そこで実績を作る</strong>こと。これが現実的な戦略だ。</p>
+
+    <h2 id="s5" data-num="§ 05">ノンバンク系の位置づけ</h2>
+
+    <p>もうひとつ、よくある質問に答えておく。「ノンバンク系の銀行はどうですか」。</p>
+
+    <p>たしかに、ノンバンク系には<strong>サラリーマン属性があれば、比較的融資を引きやすい銀行</strong>がある。不動産投資をやっている人なら、いくつか思い浮かぶはずだ。</p>
+
+    <h3>長所と短所</h3>
+
+    <p>これらは1棟目、2棟目を買うには便利だ。属性をそのまま使えば、融資が付きやすい。</p>
+
+    <div class="callout warn">
+      <div class="callout-label mono">WARNING</div>
+      ただし、ノンバンク系は<strong>拡大には向かない</strong>。サラリーマン属性の枠を使い切ったら、それ以上は融資を伸ばしにくい。2〜3棟目で融資の限度にぶつかり、そこで止まってしまう人が多い。
+    </div>
+
+    <p>もし本気で拡大していきたい、5棟・10棟と積み上げて資産を作りたいと考えているなら、やはり<strong>信用金庫・地方銀行・大手地銀という、事業性融資の本流ルート</strong>を通るべきだ。最初は時間がかかるが、将来の拡大余力が全く違う。</p>
+
+    <p>ノンバンク系は、入口としてはアリだが、<strong>出口を見据えて使う</strong>のが鉄則。ここを勘違いすると、早い段階で詰まる。</p>
+
+    <h3>10年かけて学んだこと</h3>
+
+    <p>私自身、10年かけてこの階段を登ってきた。一朝一夕ではできない。でも、一歩ずつ進めば、必ず景色は変わる。融資の条件は、<strong>交渉で決まるものではなく、自分自身の属性と実績で決まる</strong>。このシンプルな事実を受け入れることが、不動産投資の第一歩だ。</p>
+
+  </div>
+
+  <!-- YT LINK -->
+  <div class="yt-link">
+    <a href="#" class="yt-link-inner">
+      <div class="yt-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="yt-text">
+        <div class="yt-label mono">YOUTUBE / 関連動画</div>
+        <div class="yt-title">大手地銀から金利1.6%で9割融資を引いた話</div>
+      </div>
+      <div class="yt-arrow">→</div>
+    </a>
+  </div>
+
+</article>
+
+<!-- RELATED -->
+<section class="related-section">
+  <div class="related-header">
+    <span class="related-num mono">§ RELATED</span>
+    <h2 class="related-title mincho">関連する記事</h2>
+  </div>
+  <div class="related-grid">
+    <a href="article-03.html" class="related-card">
+      <div class="related-card-num mono">CH.01 / ENTRY 03</div>
+      <div class="related-card-title mincho">大手地銀3社を使い分けた話。融資額が6000万円違った</div>
+      <div class="related-card-desc">同じ物件を3社に持ち込んだ結果、条件は見事にバラバラ。3社の性格を解剖する。</div>
+    </a>
+    <a href="article-01.html" class="related-card">
+      <div class="related-card-num mono">CH.02 / ENTRY 04</div>
+      <div class="related-card-title mincho">都内新築アパート、値引き900万円交渉の全記録</div>
+      <div class="related-card-desc">売主・仲介・設計の三者構造を理解し、手数料の再配分から値引きを引き出した交渉の実例。</div>
+    </a>
+    <a href="#" class="related-card">
+      <div class="related-card-num mono">CH.08 / ENTRY 09</div>
+      <div class="related-card-title mincho">自己資金1000万円を貯める技術</div>
+      <div class="related-card-desc">不動産投資のスタートラインに立つための、現実的な資産形成ロードマップ。</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 東大卒会計士の不動産投資攻略書 / by さとうみいた</div>
+  <div>YouTube「東大卒会計士の不動産投資日記」と連携</div>
+</footer>
+
+</body>
+</html>

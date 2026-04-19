@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大手地銀3社を使い分けた話。同じ物件で融資額が6000万円違った｜東大卒会計士の不動産投資攻略書</title>
+<meta name="description" content="関東の大手地銀3社（C銀行・Y銀行・K銀行）に、同じ3億円の物件を持ち込んだ。結果、融資条件は見事にバラバラ。3社の性格の違いと、使い分けの戦略を実例で解剖する。">
+<meta name="author" content="さとうみいた">
+
+<meta property="og:title" content="大手地銀3社を使い分けた話。融資額が6000万円違った">
+<meta property="og:description" content="同じ物件で、3社の条件がバラバラ。C銀行は9割・Y銀行は7割・K銀行は25年。地銀を使い分ける戦略。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="大手地銀3社を使い分けた話。融資額が6000万円違った">
+<meta name="twitter:description" content="同じ物件を3社に打診した結果、融資条件は見事にバラバラだった。">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1613;
+    --paper: #f4efe6;
+    --paper-dark: #e8e0d0;
+    --paper-darker: #ddd2bd;
+    --accent: #8b2820;
+    --accent-soft: #c4502a;
+    --gold: #a88845;
+    --muted: #6b6357;
+    --rule: #2a221d;
+    --rule-soft: #c0b8a8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.9;
+    font-feature-settings: "palt";
+    font-size: 16px;
+  }
+
+  .mincho { font-family: 'Shippori Mincho', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* ─── TOP BAR ─── */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-left { display: flex; gap: 24px; align-items: center; }
+  .topbar-logo { font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 14px; letter-spacing: 0.2em; }
+  .topbar-meta { color: var(--muted); }
+  .topbar-nav { display: flex; gap: 20px; }
+  .topbar-nav a { color: var(--ink); text-decoration: none; }
+  .topbar-nav a:hover { color: var(--accent); }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* ─── ARTICLE HEAD ─── */
+  .article-head {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 32px;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 40px;
+  }
+  .article-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .article-chapter {
+    padding: 4px 10px;
+    background: var(--accent);
+    color: var(--paper);
+    letter-spacing: 0.15em;
+  }
+  .article-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .article-lead {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+  .article-author {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .author-info { font-size: 13px; }
+  .author-name { font-weight: 700; }
+  .author-title { color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; }
+
+  /* ─── TL;DR BOX ─── */
+  .tldr {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+  .tldr-inner {
+    background: var(--paper-dark);
+    border: 1px solid var(--rule);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .tldr-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .tldr-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .tldr-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tldr-list li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .tldr-list li::before {
+    content: "▪";
+    position: absolute;
+    left: 8px;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  /* ─── KEY DATA BOX ─── */
+  .key-data {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 32px;
+  }
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-cell {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-cell-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .data-cell-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .data-cell-value .unit { font-size: 13px; margin-left: 2px; color: var(--muted); font-weight: 400; }
+  .data-cell-value.accent { color: var(--accent); }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 32px;
+  }
+  .toc-inner {
+    background: var(--paper);
+    border-left: 3px solid var(--accent);
+    padding: 20px 28px;
+  }
+  .toc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .toc-list { list-style: none; padding: 0; }
+  .toc-list li {
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed var(--rule-soft);
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── ARTICLE BODY ─── */
+  .article-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .article-body h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 80px 0 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .article-body h2::before {
+    content: attr(data-num);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .article-body h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .article-body p {
+    margin-bottom: 24px;
+    line-height: 2.0;
+  }
+  .article-body strong { font-weight: 700; background: linear-gradient(transparent 65%, rgba(139,40,32,0.15) 65%); }
+  .article-body a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--paper-dark);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin: 32px 0;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .callout-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .callout.warn { border-left-color: var(--accent); }
+  .callout.warn .callout-label { color: var(--accent); }
+
+  /* QUOTE BLOCK */
+  blockquote {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 32px 40px;
+    margin: 40px 0;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+  }
+  blockquote::before {
+    content: "「";
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 48px;
+    opacity: 0.3;
+    font-weight: 800;
+  }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 32px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--paper);
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    background: var(--paper-dark);
+    color: var(--muted);
+    border-bottom: 2px solid var(--rule);
+  }
+  td.num { font-family: 'JetBrains Mono', monospace; }
+
+  /* STEPS */
+  .steps { margin: 32px 0; counter-reset: step; }
+  .step {
+    padding: 20px 24px 20px 72px;
+    position: relative;
+    border: 1px solid var(--rule-soft);
+    margin-bottom: -1px;
+    background: var(--paper);
+  }
+  .step::before {
+    counter-increment: step;
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .step-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .step-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+
+  /* ─── RELATED ─── */
+  .related-section {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 32px;
+  }
+  .related-header {
+    border-top: 2px solid var(--rule);
+    padding-top: 40px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .related-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: 0.2em; }
+  .related-title { font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 800; }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .related-card {
+    background: var(--paper);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.2s;
+    display: block;
+  }
+  .related-card:hover { background: var(--paper-dark); }
+  .related-card-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 12px; }
+  .related-card-title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
+  .related-card-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+
+  /* ─── YOUTUBE LINK ─── */
+  .yt-link {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 32px;
+  }
+  .yt-link-inner {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .yt-link-inner:hover { background: var(--accent); }
+  .yt-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .yt-icon svg { width: 20px; height: 20px; fill: var(--paper); }
+  .yt-text { flex: 1; }
+  .yt-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; opacity: 0.7; margin-bottom: 4px; }
+  .yt-title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; }
+  .yt-arrow { font-size: 20px; opacity: 0.5; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 32px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 900px) {
+    .data-grid { grid-template-columns: repeat(2, 1fr); }
+    .related-grid { grid-template-columns: 1fr; }
+    .article-body h2 { font-size: 24px; }
+    blockquote { font-size: 18px; padding: 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="index.html" style="text-decoration:none;color:inherit;display:flex;gap:24px;align-items:center;">
+      <span class="topbar-logo">東大卒会計士の不動産投資攻略書</span>
+      <span class="topbar-meta mono">by さとうみいた / VOL.01 / 2026</span>
+    </a>
+  </div>
+  <div class="topbar-nav mono">
+    <a href="index.html#map">目次</a>
+    <a href="index.html#cases">事例</a>
+    <a href="#">著者</a>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb mono">
+  <a href="index.html">HOME</a><span class="sep">/</span>
+  <a href="#">CH.01 融資攻略</a><span class="sep">/</span>
+  <a href="#">実戦ケース</a><span class="sep">/</span>
+  <span>大手地銀3社比較</span>
+</div>
+
+<!-- ARTICLE HEAD -->
+<article>
+  <header class="article-head">
+    <div class="article-meta">
+      <span class="article-chapter">CH.01 融資攻略</span>
+      <span>ENTRY / 03</span>
+      <span>2026.04.19</span>
+      <span>読了 12分</span>
+    </div>
+    <h1 class="article-title mincho">大手地銀3社を使い分けた話。<br>融資額が6000万円違った。</h1>
+    <p class="article-lead mincho">
+      関東の大手地銀3社（C銀行・Y銀行・K銀行）に、<br>
+      同じ3億円の物件を持ち込んだ。<br>
+      結果、融資条件は見事にバラバラだった。
+    </p>
+    <div class="article-author">
+      <div class="author-avatar mincho">佐</div>
+      <div class="author-info">
+        <div class="author-name">さとうみいた</div>
+        <div class="author-title mono">東大卒 / 公認会計士 / 不動産投資歴10年</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <div class="tldr-inner">
+      <div class="tldr-label mono">TL;DR — 3分で要点</div>
+      <h2 class="tldr-title mincho">この記事の結論</h2>
+      <ul class="tldr-list">
+        <li><strong>「大手地銀」は一枚岩ではない</strong>。同じカテゴリでも銀行ごとに性格が全く違う。</li>
+        <li>C銀行は<strong>積算不問・収益還元重視で9割融資</strong>。都内の高立地物件に最強。</li>
+        <li>Y銀行は<strong>金利が一段低いが積算重視</strong>。同じ物件で7割止まり。郊外・中古で活きる。</li>
+        <li>K銀行は<strong>期間25年が上限</strong>。不動産融資に消極的で、メインには使いにくい。</li>
+        <li>銀行選びは「物件の特性」と「自分の属性」の両面で決める。相性ゲームだ。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KEY DATA -->
+  <section class="key-data">
+    <div class="data-grid">
+      <div class="data-cell">
+        <div class="data-cell-label mono">C銀行</div>
+        <div class="data-cell-value mincho accent">9<span class="unit">割融資・30年</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">Y銀行</div>
+        <div class="data-cell-value mincho">7<span class="unit">割融資・30年</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">K銀行</div>
+        <div class="data-cell-value mincho">25<span class="unit">年・消極的</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">融資額の差</div>
+        <div class="data-cell-value mincho accent">6,000<span class="unit">万円</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOC -->
+  <section class="toc">
+    <div class="toc-inner">
+      <div class="toc-label mono">目次</div>
+      <ul class="toc-list">
+        <li><a href="#s1"><span>01. 大手地銀は一枚岩じゃない</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s2"><span>02. C銀行：積算不問・収益還元重視・9割融資</span><span class="toc-num">03 min</span></a></li>
+        <li><a href="#s3"><span>03. Y銀行：金利は一段低い、でも積算重視で7割止まり</span><span class="toc-num">03 min</span></a></li>
+        <li><a href="#s4"><span>04. K銀行：期間25年・不動産融資は消極的</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s5"><span>05. 3社の比較まとめと、使い分けの戦略</span><span class="toc-num">02 min</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <div class="article-body">
+
+    <h2 id="s1" data-num="§ 01">大手地銀は一枚岩じゃない</h2>
+
+    <p>前回の記事では、大手地銀から金利1.6%・9割融資・30年で2.7億円を引いた話をした。そのときに、信金→地銀→大手地銀の階段を一段ずつ登るのが現実的だと書いた。</p>
+
+    <p>今日はその続きで、もう一段だけ具体的な話をする。ひと口に「大手地銀」と言っても、<strong>実は銀行ごとに、驚くほど性格が違う</strong>のだ。</p>
+
+    <p>私は現在、関東の大手地銀3社と取引をしている。この記事では、それぞれを<strong>C銀行・Y銀行・K銀行</strong>と呼ぶ。銀行名は伏せるが、不動産投資をやっている方なら想像はつくかもしれない。</p>
+
+    <div class="callout">
+      <div class="callout-label mono">POINT</div>
+      この3社、同じ「大手地銀」というカテゴリに入っているのに、融資方針が全く違う。今回の物件を3社すべてに持ち込んだところ、出てきた条件は見事にバラバラだった。
+    </div>
+
+    <h3>銀行選びは、相性ゲーム</h3>
+
+    <p>「大手地銀に持ち込めば借りられるだろう」と思って動くと、かなり遠回りになる。大事なのは、<strong>物件の特性と、自分の属性と、銀行の性格。この3つをマッチさせる</strong>こと。では、具体的に3社の違いを見ていく。</p>
+
+    <h2 id="s2" data-num="§ 02">C銀行：積算不問・収益還元重視・9割融資</h2>
+
+    <p>まずC銀行。私が今メインで使っている銀行で、今回の物件でも<strong>9割融資・金利1.6%・期間30年</strong>を引けた銀行だ。</p>
+
+    <h3>積算評価を重視しない</h3>
+
+    <p>C銀行の特徴を一言で言うと、<strong>積算評価を重視しない</strong>こと。</p>
+
+    <p>不動産投資の世界で「積算評価」というのは、土地の路線価と建物の再調達価格から計算する、銀行独自の担保評価。これが物件価格を上回っていないと融資が出ない、という銀行は多い。</p>
+
+    <p>でもC銀行は違う。C銀行が見るのは、<strong>物件の収益がどれくらい出るか</strong>。家賃収入から返済や経費を引いて、ちゃんと毎月プラスで回るか。この<strong>収益還元ベース</strong>で判断する。</p>
+
+    <blockquote>
+      積算が物件価格の50%しか出ていなくても、収益で回るなら9割融資してくれる。これが、都内の新築アパートに決定的に相性がいい。
+    </blockquote>
+
+    <p>都内の新築アパートは、利回りは高くないが、立地と将来性が良い。このタイプの物件は積算が出にくく、積算重視の銀行ではまず融資が伸びない。C銀行のような収益還元ベースの銀行でなければ、この領域は戦えないのだ。</p>
+
+    <h3>無条件ではない。属性が前提</h3>
+
+    <p>ただし、C銀行も無条件で9割出すわけではない。<strong>借り手の属性がしっかりしていることが前提</strong>。年収・金融資産・既存借入の健全性。こういうものが一定水準を超えていないと、そもそも話を聞いてもらえない。</p>
+
+    <p>私の場合、10年かけて属性を育てて、他行での返済実績を積み上げてきた。だからこそC銀行が「この人なら9割出せる」と判断してくれた。</p>
+
+    <h2 id="s3" data-num="§ 03">Y銀行：金利は一段低い、でも積算重視で7割止まり</h2>
+
+    <p>次にY銀行。Y銀行の特徴は、<strong>金利が一段低い</strong>こと。C銀行やK銀行よりも、0.2〜0.3%程度、金利が安く出る傾向がある。</p>
+
+    <p>これだけ聞くと「じゃあY銀行が最強じゃないか」と思うかもしれない。でも、そう単純な話ではない。</p>
+
+    <h3>積算が出ない物件では、融資額が伸びない</h3>
+
+    <p>Y銀行は<strong>積算評価を重視する</strong>銀行だ。物件の担保価値を細かく見て、積算が出ていないと融資額が伸びない。</p>
+
+    <p>今回の物件で、実際にY銀行にも打診してみた。同じ3億円の物件だ。出てきた条件は、<strong>融資額がだいたい7割まで</strong>。C銀行の9割と比べて、2割近く融資額が減る。これは、自己資金を2割多く入れなければいけないということだ。</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>銀行</th><th>融資額</th><th>自己資金</th><th>金利差（概算）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>C銀行</td><td class="num">2.7億円（9割）</td><td class="num">3,000万円</td><td class="num">基準</td></tr>
+          <tr><td>Y銀行</td><td class="num">2.1億円（7割）</td><td class="num">9,000万円</td><td class="num">-0.2〜-0.3%</td></tr>
+          <tr><td>差分</td><td class="num">-6,000万円</td><td class="num">+6,000万円</td><td class="num">-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-label mono">WARNING</div>
+      金利が0.2%低いことの節約効果よりも、<strong>自己資金6000万円を追加で用意する機会コスト</strong>のほうが、はるかに大きい。だから今回の物件ではY銀行を使わなかった。
+    </div>
+
+    <h3>Y銀行が活きる場面</h3>
+
+    <p>ただ、これはY銀行が悪いという話ではない。Y銀行は、<strong>積算が出る物件、例えば土地が広めの中古物件や郊外の物件</strong>では、金利の低さが活きる。物件の特性と銀行の性格が合えば、Y銀行が最強になるケースもある。</p>
+
+    <h2 id="s4" data-num="§ 04">K銀行：期間25年・不動産融資は消極的</h2>
+
+    <p>最後にK銀行。K銀行の金利はC銀行と同じくらい。ここはあまり差がない。</p>
+
+    <h3>期間25年の影響</h3>
+
+    <p>ただし、K銀行には大きな特徴がある。<strong>融資期間が最大25年</strong>なのだ。C銀行やY銀行が30年までOKなのに対し、K銀行は5年短い。</p>
+
+    <p>期間が5年短いということは、月々の返済額が増え、キャッシュフローに直撃する。</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>期間</th><th>月々返済</th><th>年間返済</th><th>差</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>30年（C銀行・Y銀行）</td><td class="num">約94万円</td><td class="num">約1,128万円</td><td class="num">基準</td></tr>
+          <tr><td>25年（K銀行）</td><td class="num">約109万円</td><td class="num">約1,308万円</td><td class="num">+180万円/年</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>2.7億円を金利1.6%で借りる場合、30年と25年では、<strong>毎月15万円、年間180万円も返済負担が変わる</strong>。同じ物件・同じ金利でも、期間が違うだけでこれだけ手残りが変わる。</p>
+
+    <h3>不動産融資への積極性が控えめ</h3>
+
+    <p>もうひとつ、K銀行の重要な特徴がある。<strong>不動産への融資にあまり力を入れていない</strong>こと。これは直接聞いた話ではなく、打診してみて感じた肌感覚だ。</p>
+
+    <p>K銀行は明らかに、事業性融資全般を広く手がけていて、不動産投資家への融資を積極的に取りに行っているわけではない。C銀行が「借りてください」くらいのスタンスで前のめりに来るのに対し、K銀行は「まあ検討しますよ」くらいの温度感。</p>
+
+    <p>だから、K銀行はメインで使う銀行にはなりにくい。<strong>共同担保の当て先とか、一時的な借入先</strong>としてなら使えるが、拡大戦略の中心には置けない、というのが私の判断だ。</p>
+
+    <h2 id="s5" data-num="§ 05">3社の比較まとめと、使い分けの戦略</h2>
+
+    <h3>3社の比較表</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>銀行</th><th>融資割合</th><th>金利</th><th>期間</th><th>特徴</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>C銀行</td><td class="num">9割</td><td class="num">中（1.6%）</td><td class="num">30年</td><td>収益還元重視・本命</td></tr>
+          <tr><td>Y銀行</td><td class="num">7割</td><td class="num">低（-0.2〜-0.3%）</td><td class="num">30年</td><td>積算重視・郊外向け</td></tr>
+          <tr><td>K銀行</td><td class="num">案件次第</td><td class="num">中</td><td class="num">25年</td><td>補助的位置づけ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>物件の特性で選ぶ</h3>
+
+    <p>では、どう使い分ければいいのか。ひとつの考え方として、<strong>自分が買いたい物件の特性で選ぶ</strong>のが基本だ。</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-title mincho">都内・新築・高立地・低利回り</div>
+        <div class="step-desc">
+          将来性はあるが積算が出にくい物件。<strong>C銀行</strong>の収益還元ベースが最強。
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-title mincho">郊外・中古・積算が出る</div>
+        <div class="step-desc">
+          担保価値が明確に評価される物件。<strong>Y銀行</strong>の低金利が活きる。
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-title mincho">メインではない、補助的な取引</div>
+        <div class="step-desc">
+          共同担保や資金繰り用途。<strong>K銀行</strong>は期間が短い分、使い方を限定する。
+        </div>
+      </div>
+    </div>
+
+    <h3>自分の属性で選ぶ</h3>
+
+    <p>もうひとつ、<strong>自分の属性で選ぶ</strong>という視点もある。属性が高く融資額を最大化したいならC銀行。属性がそこそこで金利の低さを取りたいならY銀行。シンプルだ。</p>
+
+    <div class="callout">
+      <div class="callout-label mono">POINT</div>
+      ただし、これはあくまで関東の話。<strong>地方に行けば、また全く違う地銀の世界</strong>がある。今日の話をそのまま全国に当てはめないでほしい。
+    </div>
+
+    <h3>10年かけて学んだこと</h3>
+
+    <p>私がこの10年で学んだ一番大事なことは、<strong>銀行には性格があり、自分と物件との相性で選ぶ</strong>ということだ。「とにかく大手地銀に持ち込めば借りられる」という発想では、遠回りになる。</p>
+
+    <p>物件と銀行、両方の性格を理解して、マッチする組み合わせを探す。これが拡大していく上での現実的な戦略である。</p>
+
+  </div>
+
+  <!-- YT LINK -->
+  <div class="yt-link">
+    <a href="#" class="yt-link-inner">
+      <div class="yt-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="yt-text">
+        <div class="yt-label mono">YOUTUBE / 関連動画</div>
+        <div class="yt-title">大手地銀3社を使い分けた話。同じ「地銀」でも、融資条件はここまで違う</div>
+      </div>
+      <div class="yt-arrow">→</div>
+    </a>
+  </div>
+
+</article>
+
+<!-- RELATED -->
+<section class="related-section">
+  <div class="related-header">
+    <span class="related-num mono">§ RELATED</span>
+    <h2 class="related-title mincho">関連する記事</h2>
+  </div>
+  <div class="related-grid">
+    <a href="article-02.html" class="related-card">
+      <div class="related-card-num mono">CH.01 / ENTRY 02</div>
+      <div class="related-card-title mincho">大手地銀から金利1.6%で9割融資を引いた話</div>
+      <div class="related-card-desc">不動産投資は、自己資金ゲーム。10年かけて登ってきた信金→地銀→大手地銀の階段。</div>
+    </a>
+    <a href="article-01.html" class="related-card">
+      <div class="related-card-num mono">CH.02 / ENTRY 04</div>
+      <div class="related-card-title mincho">都内新築アパート、値引き900万円交渉の全記録</div>
+      <div class="related-card-desc">売主・仲介・設計の三者構造を理解し、手数料の再配分から値引きを引き出した交渉の実例。</div>
+    </a>
+    <a href="#" class="related-card">
+      <div class="related-card-num mono">CH.01 / ENTRY 01</div>
+      <div class="related-card-title mincho">積算評価 vs 収益還元評価の本質</div>
+      <div class="related-card-desc">銀行が物件を見る2つの視点。どちらで見られるかで、融資条件は大きく変わる。</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 東大卒会計士の不動産投資攻略書 / by さとうみいた</div>
+  <div>YouTube「東大卒会計士の不動産投資日記」と連携</div>
+</footer>
+
+</body>
+</html>
