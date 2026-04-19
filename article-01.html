@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>都内新築アパート、値引き900万円交渉の全記録 | 東大卒会計士の不動産投資攻略書</title>
+<meta name="description" content="12戸・鉄骨造・総額3.0億円。売主・仲介・設計の三者構造を理解し、手数料の再配分ロジックから値引きを引き出した交渉プロセスを、実際の数字とともに全公開する。">
+<meta name="author" content="さとうみいた">
+
+<meta property="og:title" content="都内新築アパート、値引き900万円交渉の全記録">
+<meta property="og:description" content="売主・仲介・設計の三者構造を理解すれば、値引き余地はそこにある。実際の契約で使った交渉ロジック。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="都内新築アパート、値引き900万円交渉の全記録">
+<meta name="twitter:description" content="売主・仲介・設計の三者構造を理解すれば、値引き余地はそこにある。">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1613;
+    --paper: #f4efe6;
+    --paper-dark: #e8e0d0;
+    --paper-darker: #ddd2bd;
+    --accent: #8b2820;
+    --accent-soft: #c4502a;
+    --gold: #a88845;
+    --muted: #6b6357;
+    --rule: #2a221d;
+    --rule-soft: #c0b8a8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.9;
+    font-feature-settings: "palt";
+    font-size: 16px;
+  }
+
+  .mincho { font-family: 'Shippori Mincho', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* ─── TOP BAR ─── */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-left { display: flex; gap: 24px; align-items: center; }
+  .topbar-logo { font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 14px; letter-spacing: 0.2em; }
+  .topbar-meta { color: var(--muted); }
+  .topbar-nav { display: flex; gap: 20px; }
+  .topbar-nav a { color: var(--ink); text-decoration: none; }
+  .topbar-nav a:hover { color: var(--accent); }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* ─── ARTICLE HEAD ─── */
+  .article-head {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 32px;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 40px;
+  }
+  .article-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .article-chapter {
+    padding: 4px 10px;
+    background: var(--accent);
+    color: var(--paper);
+    letter-spacing: 0.15em;
+  }
+  .article-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .article-lead {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+  .article-author {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .author-info { font-size: 13px; }
+  .author-name { font-weight: 700; }
+  .author-title { color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; }
+
+  /* ─── TL;DR BOX ─── */
+  .tldr {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+  .tldr-inner {
+    background: var(--paper-dark);
+    border: 1px solid var(--rule);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .tldr-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .tldr-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .tldr-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tldr-list li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .tldr-list li::before {
+    content: "▪";
+    position: absolute;
+    left: 8px;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  /* ─── KEY DATA BOX ─── */
+  .key-data {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 32px;
+  }
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-cell {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-cell-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .data-cell-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .data-cell-value .unit { font-size: 13px; margin-left: 2px; color: var(--muted); font-weight: 400; }
+  .data-cell-value.accent { color: var(--accent); }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 32px;
+  }
+  .toc-inner {
+    background: var(--paper);
+    border-left: 3px solid var(--accent);
+    padding: 20px 28px;
+  }
+  .toc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .toc-list { list-style: none; padding: 0; }
+  .toc-list li {
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed var(--rule-soft);
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── ARTICLE BODY ─── */
+  .article-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .article-body h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 80px 0 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .article-body h2::before {
+    content: attr(data-num);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .article-body h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .article-body p {
+    margin-bottom: 24px;
+    line-height: 2.0;
+  }
+  .article-body strong { font-weight: 700; background: linear-gradient(transparent 65%, rgba(139,40,32,0.15) 65%); }
+  .article-body a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--paper-dark);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin: 32px 0;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .callout-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .callout.warn { border-left-color: var(--accent); }
+  .callout.warn .callout-label { color: var(--accent); }
+
+  /* QUOTE BLOCK */
+  blockquote {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 32px 40px;
+    margin: 40px 0;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+  }
+  blockquote::before {
+    content: "「";
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 48px;
+    opacity: 0.3;
+    font-weight: 800;
+  }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 32px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--paper);
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    background: var(--paper-dark);
+    color: var(--muted);
+    border-bottom: 2px solid var(--rule);
+  }
+  td.num { font-family: 'JetBrains Mono', monospace; }
+
+  /* STEPS */
+  .steps { margin: 32px 0; counter-reset: step; }
+  .step {
+    padding: 20px 24px 20px 72px;
+    position: relative;
+    border: 1px solid var(--rule-soft);
+    margin-bottom: -1px;
+    background: var(--paper);
+  }
+  .step::before {
+    counter-increment: step;
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .step-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .step-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+
+  /* ─── RELATED ─── */
+  .related-section {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 32px;
+  }
+  .related-header {
+    border-top: 2px solid var(--rule);
+    padding-top: 40px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .related-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: 0.2em; }
+  .related-title { font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 800; }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .related-card {
+    background: var(--paper);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.2s;
+    display: block;
+  }
+  .related-card:hover { background: var(--paper-dark); }
+  .related-card-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 12px; }
+  .related-card-title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
+  .related-card-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+
+  /* ─── YOUTUBE LINK ─── */
+  .yt-link {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 32px;
+  }
+  .yt-link-inner {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .yt-link-inner:hover { background: var(--accent); }
+  .yt-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .yt-icon svg { width: 20px; height: 20px; fill: var(--paper); }
+  .yt-text { flex: 1; }
+  .yt-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; opacity: 0.7; margin-bottom: 4px; }
+  .yt-title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; }
+  .yt-arrow { font-size: 20px; opacity: 0.5; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 32px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 900px) {
+    .data-grid { grid-template-columns: repeat(2, 1fr); }
+    .related-grid { grid-template-columns: 1fr; }
+    .article-body h2 { font-size: 24px; }
+    blockquote { font-size: 18px; padding: 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="index.html" style="text-decoration:none;color:inherit;display:flex;gap:24px;align-items:center;">
+      <span class="topbar-logo">東大卒会計士の不動産投資攻略書</span>
+      <span class="topbar-meta mono">by さとうみいた / VOL.01 / 2026</span>
+    </a>
+  </div>
+  <div class="topbar-nav mono">
+    <a href="#">目次</a>
+    <a href="#">事例</a>
+    <a href="#">失敗</a>
+    <a href="#">著者</a>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb mono">
+  <a href="index.html">HOME</a><span class="sep">/</span>
+  <a href="#">CH.02 物件選定</a><span class="sep">/</span>
+  <a href="#">実戦ケース</a><span class="sep">/</span>
+  <span>値引き900万円交渉</span>
+</div>
+
+<!-- ARTICLE HEAD -->
+<article>
+  <header class="article-head">
+    <div class="article-meta">
+      <span class="article-chapter">CH.02 物件選定</span>
+      <span>CASE STUDY / 04</span>
+      <span>2026.04.19</span>
+      <span>読了 12分</span>
+    </div>
+    <h1 class="article-title mincho">都内新築一棟アパート、<br>値引き900万円交渉の全記録。</h1>
+    <p class="article-lead mincho">
+      売主・仲介・設計の三者構造を理解すれば、値引き余地はそこにある。<br>
+      実際の契約で使った交渉ロジックを、数字とともに開示する。
+    </p>
+    <div class="article-author">
+      <div class="author-avatar mincho">佐</div>
+      <div class="author-info">
+        <div class="author-name">さとうみいた</div>
+        <div class="author-title mono">東大卒 / 公認会計士 / 不動産投資歴10年</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <div class="tldr-inner">
+      <div class="tldr-label mono">TL;DR — 3分で要点</div>
+      <h2 class="tldr-title mincho">この記事の結論</h2>
+      <ul class="tldr-list">
+        <li><strong>値引き交渉は「誰の財布」を狙うかで決まる</strong>。売主の利益を削るのは難しいが、仲介手数料と設計報酬には余地がある。</li>
+        <li>今回は<strong>仲介＋設計の手数料再配分</strong>で900万円の値引きを引き出した。売主の売却純額は変えていない。</li>
+        <li>値引きは額より<strong>特約条項のセット</strong>で勝負する。建築確認・総工事費超過・構造変更の解除権が本丸。</li>
+        <li><strong>建設費インフレ局面</strong>では、売主側にも早期契約インセンティブがあり、交渉余地が構造的に広い。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KEY DATA -->
+  <section class="key-data">
+    <div class="data-grid">
+      <div class="data-cell">
+        <div class="data-cell-label mono">総額</div>
+        <div class="data-cell-value mincho">3.0<span class="unit">億円</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">融資</div>
+        <div class="data-cell-value mincho">30<span class="unit">年 / 1.6%</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">値引き</div>
+        <div class="data-cell-value mincho accent">−900<span class="unit">万</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="data-cell-label mono">交渉期間</div>
+        <div class="data-cell-value mincho">3<span class="unit">ヶ月</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOC -->
+  <section class="toc">
+    <div class="toc-inner">
+      <div class="toc-label mono">目次</div>
+      <ul class="toc-list">
+        <li><a href="#s1"><span>01. なぜ値引きできたのか、構造を先に理解する</span><span class="toc-num">03 min</span></a></li>
+        <li><a href="#s2"><span>02. 三者の利害を地図化する</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s3"><span>03. 交渉プロセスを3段階で設計する</span><span class="toc-num">04 min</span></a></li>
+        <li><a href="#s4"><span>04. 特約条項、本当の勝負はここ</span><span class="toc-num">02 min</span></a></li>
+        <li><a href="#s5"><span>05. この手法が通用する条件と、通用しないケース</span><span class="toc-num">01 min</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <div class="article-body">
+
+    <h2 id="s1" data-num="§ 01">なぜ値引きできたのか、構造を先に理解する</h2>
+
+    <p>結論から言えば、新築一棟アパートの取引には<strong>「削れる場所」と「削れない場所」</strong>がある。これを理解しないまま「とりあえず安くして」と交渉に入る投資家は、まず失敗する。</p>
+
+    <p>新築一棟アパートの総額には、土地代、建築費、売主の利益、仲介手数料、設計報酬、諸費用が含まれる。このうち、売主の利益は通常10〜15%程度。ここを削るのは原理的に難しい。一方で、仲介手数料と設計報酬は、彼らにとっての「交渉バッファ」として最初から一定の余裕を持って設定されていることが多い。</p>
+
+    <div class="callout">
+      <div class="callout-label mono">POINT</div>
+      値引き交渉の第一歩は、「誰の財布から出るか」を特定すること。売主を敵にすると交渉は成立しない。仲介と設計の再配分で決着させる構図を作る。
+    </div>
+
+    <h3>取引構造を可視化する</h3>
+
+    <p>今回の取引に登場したプレイヤーは4者：</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>役割</th><th>立場</th><th>利害</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>売主</td><td>デベロッパー</td><td>早期売却・純利益確保</td></tr>
+          <tr><td>仲介</td><td>買主側エージェント</td><td>成約手数料（3%+6万）</td></tr>
+          <tr><td>設計</td><td>売主指定</td><td>設計報酬・継続発注</td></tr>
+          <tr><td>施工</td><td>売主指定</td><td>工事請負益</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="s2" data-num="§ 02">三者の利害を地図化する</h2>
+
+    <p>仲介と設計は、今回の案件以外にも継続的な関係がある。つまり<strong>「単発の手数料を最大化する」ではなく「長期的な関係を維持する」インセンティブ</strong>が働いている。ここに交渉の入口がある。</p>
+
+    <blockquote>
+      仲介手数料の3%は上限であって、義務ではない。
+    </blockquote>
+
+    <p>多くの投資家が見落としているが、宅建業法が定めているのは<strong>上限</strong>であり、下限ではない。仲介が自主的に減額することは合法だし、実務上も行われている。</p>
+
+    <h2 id="s3" data-num="§ 03">交渉プロセスを3段階で設計する</h2>
+
+    <p>値引きは「一度に言う」ものではなく、<strong>段階的に積み上げる</strong>もの。今回は以下の3ステップで進めた。</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-title mincho">第1段階：融資条件を先に確定させる</div>
+        <div class="step-desc">
+          融資が確定していない状態での値引き交渉は弱い。逆に「1.6%・30年・フルローン」が確定していることを伝えると、売主側は「この買主なら成約確率が高い」と判断し、交渉のテーブルに乗ってくる。融資は交渉カード。
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-title mincho">第2段階：特約条項を先に提示する</div>
+        <div class="step-desc">
+          いきなり値引き額を提示するのではなく、「この特約が入るなら契約します」と条件を提示する。建築確認・構造変更・総工事費超過時の解除権。売主側は「この条件なら値引きで決着させたい」と考え始める。
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-title mincho">第3段階：手数料の再配分で値引きを確定</div>
+        <div class="step-desc">
+          最終段階で、仲介と設計の手数料から合計900万円を買主側に還流させる形で値引きを確定。売主の売却純額は変わらないため、合意が取りやすい。
+        </div>
+      </div>
+    </div>
+
+    <h2 id="s4" data-num="§ 04">特約条項、本当の勝負はここ</h2>
+
+    <p>値引き900万円は目に見える成果だが、実は<strong>特約条項のほうが経済価値が大きい</strong>。建設費インフレ局面では、契約から引渡しまでの間に総工事費が上振れするリスクがある。これを買主が被る契約だと、見えないところで数千万円の損失が発生しうる。</p>
+
+    <div class="callout warn">
+      <div class="callout-label mono">WARNING</div>
+      特約条項なしの契約は、値引きと引き換えにリスクを買っている可能性がある。額面の値引きだけを見て満足してはいけない。
+    </div>
+
+    <h3>絶対に入れるべき5項目</h3>
+
+    <p>今回の契約で整備した特約のうち、他の案件でも応用できるものを5つ挙げる。詳細は<a href="#">別記事「契約書の特約条項、絶対に入れるべき5項目」</a>で解説している。</p>
+
+    <h2 id="s5" data-num="§ 05">この手法が通用する条件と、通用しないケース</h2>
+
+    <p>最後に重要な注意。このアプローチは<strong>「新築・デベロッパー案件・買主属性が強い」</strong>という3条件が揃ったときに機能する。中古の個人売主案件では構造が違うため、別の交渉ロジックが必要になる。</p>
+
+    <p>また、買主の属性（年収・金融資産・融資確定度合い）が弱いと、そもそも交渉のテーブルに乗せてもらえない。<a href="#">融資を引くのは、物件より先</a>という記事で書いた通り、交渉力の源泉は融資にある。</p>
+
+  </div>
+
+  <!-- YT LINK -->
+  <div class="yt-link">
+    <a href="#" class="yt-link-inner">
+      <div class="yt-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="yt-text">
+        <div class="yt-label mono">YOUTUBE / 関連動画</div>
+        <div class="yt-title">【実録】都内新築アパート、900万円値引き交渉の裏側</div>
+      </div>
+      <div class="yt-arrow">→</div>
+    </a>
+  </div>
+
+</article>
+
+<!-- RELATED -->
+<section class="related-section">
+  <div class="related-header">
+    <span class="related-num mono">§ RELATED</span>
+    <h2 class="related-title mincho">関連する記事</h2>
+  </div>
+  <div class="related-grid">
+    <a href="#" class="related-card">
+      <div class="related-card-num mono">CH.01 / ENTRY 02</div>
+      <div class="related-card-title mincho">融資を引くのは、物件より先。銀行別の性格と攻め方</div>
+      <div class="related-card-desc">交渉力の源泉は融資にある。銀行別の性格を理解する。</div>
+    </a>
+    <a href="#" class="related-card">
+      <div class="related-card-num mono">CH.05 / ENTRY 05</div>
+      <div class="related-card-title mincho">契約書の特約条項、絶対に入れるべき5項目</div>
+      <div class="related-card-desc">値引きより、特約のほうが経済価値が大きいこともある。</div>
+    </a>
+    <a href="#" class="related-card">
+      <div class="related-card-num mono">CH.05 / ENTRY 06</div>
+      <div class="related-card-title mincho">建設費インフレ時代、売主と戦う交渉術</div>
+      <div class="related-card-desc">石油・鉄鋼の値上がりが契約実務に与える影響。</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 東大卒会計士の不動産投資攻略書 / by さとうみいた</div>
+  <div>YouTube「東大卒会計士の不動産投資日記」と連携</div>
+</footer>
+
+</body>
+</html>

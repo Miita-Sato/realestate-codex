@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東大卒会計士の不動産投資攻略書 | by さとうみいた</title>
+<meta name="description" content="東大卒・公認会計士が10年・6棟・総資産10億円の実体験から逆算した、都内・一棟アパートに特化した体系的な攻略Wiki。融資・物件・エリア・税務・建築・運営・出口・生涯収支の8章構成。">
+<meta name="author" content="さとうみいた">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="東大卒会計士の不動産投資攻略書">
+<meta property="og:description" content="10年・6棟・総資産10億円の実体験から逆算した、都内・一棟アパート攻略Wiki。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="東大卒会計士の不動産投資攻略書">
+<meta name="twitter:description" content="10年・6棟・総資産10億円の実体験から逆算した、都内・一棟アパート攻略Wiki。">
+
+<!-- Favicon (emoji favicon) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1613;
+    --paper: #f4efe6;
+    --paper-dark: #e8e0d0;
+    --paper-darker: #ddd2bd;
+    --accent: #8b2820;
+    --accent-soft: #c4502a;
+    --gold: #a88845;
+    --muted: #6b6357;
+    --rule: #2a221d;
+    --rule-soft: #c0b8a8;
+    --done: #5a7a4a;
+    --progress: #a88845;
+    --empty: #c0b8a8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-feature-settings: "palt";
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(168,136,69,0.04) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(139,40,32,0.03) 0, transparent 40%);
+  }
+
+  .mincho { font-family: 'Shippori Mincho', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* ─── TOP BAR ─── */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-left { display: flex; gap: 24px; align-items: center; }
+  .topbar-logo { font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 14px; letter-spacing: 0.2em; }
+  .topbar-meta { color: var(--muted); }
+  .topbar-nav { display: flex; gap: 20px; }
+  .topbar-nav a { color: var(--ink); text-decoration: none; }
+  .topbar-nav a:hover { color: var(--accent); }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 80px 32px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(48px, 9vw, 120px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    font-feature-settings: "palt";
+  }
+  .hero-title .accent { color: var(--accent); }
+  .hero-title .line-1,
+  .hero-title .line-2,
+  .hero-title .line-3 { display: block; }
+  .hero-title .line-2 { font-size: 0.88em; margin-top: 0.1em; }
+  .hero-title .line-3 { font-size: 0.88em; }
+  .hero-title .nowrap { white-space: nowrap; }
+  .hero-subtitle {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 40px;
+    line-height: 2.1;
+    letter-spacing: 0.02em;
+    font-feature-settings: "palt";
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 24px 0;
+    margin-top: 40px;
+  }
+
+  /* ─── AUTHOR HERO ─── */
+  .author-hero {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 28px;
+    background: var(--paper-dark);
+    border-left: 3px solid var(--accent);
+    margin-top: 40px;
+    max-width: 760px;
+  }
+  .author-hero-avatar {
+    width: 64px;
+    height: 64px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .author-hero-info { flex: 1; }
+  .author-hero-name {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .author-hero-title {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .author-hero-desc {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .author-hero-links {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  .author-hero-links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .author-hero-links a:hover { color: var(--accent-soft); border-color: var(--accent-soft); }
+  .stat { padding: 0 24px; border-right: 1px solid var(--rule); }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-family: 'Shippori Mincho', serif; font-size: 32px; font-weight: 700; }
+  .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--muted); margin-top: 4px; }
+
+  /* ─── SECTION HEADER ─── */
+  .section-header {
+    max-width: 1400px;
+    margin: 100px auto 40px;
+    padding: 0 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 16px;
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+  }
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 36px;
+    font-weight: 800;
+  }
+  .section-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ─── MECE MAP ─── */
+  .mece-intro {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 0 32px;
+  }
+  .mece-intro-text {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 720px;
+  }
+  .mece-legend {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-dot { width: 10px; height: 10px; }
+  .legend-dot.done { background: var(--done); }
+  .legend-dot.progress { background: var(--progress); }
+  .legend-dot.empty { background: var(--empty); }
+
+  /* ─── MECE CHAPTER CARDS ─── */
+  .mece-chapters {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .mece-chapter {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 28px;
+    position: relative;
+  }
+  .mece-chapter-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mece-kanji {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .mece-chapter-title-wrap { flex: 1; }
+  .mece-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .mece-chapter-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .mece-framework {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    background: var(--paper-dark);
+    display: inline-block;
+  }
+  .mece-progress {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .mece-progress-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  .mece-progress-num .total { color: var(--muted); font-weight: 400; }
+
+  /* Matrix */
+  .matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .matrix th, .matrix td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid var(--rule-soft);
+    vertical-align: middle;
+  }
+  .matrix th {
+    background: var(--paper-dark);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .matrix th.corner { background: transparent; border: none; }
+  .matrix th.row-label {
+    text-align: left;
+    padding-left: 12px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: 0;
+    background: var(--paper);
+    border-right: 2px solid var(--rule);
+  }
+  .matrix td {
+    font-size: 11px;
+    position: relative;
+    padding: 12px 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .matrix td:hover { background: var(--paper-dark); }
+  .cell-done { background: rgba(90,122,74,0.1); }
+  .cell-done .cell-dot { background: var(--done); }
+  .cell-progress { background: rgba(168,136,69,0.08); }
+  .cell-progress .cell-dot { background: var(--progress); }
+  .cell-empty { color: var(--muted); opacity: 0.5; }
+  .cell-empty .cell-dot { background: var(--empty); }
+  .cell-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  .mece-chapter-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    margin-top: 12px;
+    display: inline-block;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 3px;
+  }
+  .mece-chapter-link:hover { color: var(--accent-soft); }
+
+  /* ─── FEATURED CASE STUDY ─── */
+  .case-study {
+    max-width: 1400px;
+    margin: 100px auto 0;
+    padding: 0 32px;
+  }
+  .case-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-card::before {
+    content: "CASE";
+    position: absolute;
+    right: -20px;
+    top: -40px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 200px;
+    font-weight: 800;
+    opacity: 0.05;
+    letter-spacing: -0.05em;
+  }
+  .case-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent-soft);
+    margin-bottom: 16px;
+  }
+  .case-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+  .case-desc {
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: 0.8;
+    margin-bottom: 32px;
+  }
+  .case-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--accent-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+    padding-bottom: 4px;
+  }
+  .case-data {
+    border-left: 1px solid rgba(255,255,255,0.1);
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .data-row:last-child { border-bottom: none; }
+  .data-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+  }
+  .data-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .data-value .small { font-size: 14px; opacity: 0.7; margin-left: 4px; }
+
+  /* ─── CTA ─── */
+  .cta {
+    max-width: 1400px;
+    margin: 120px auto 60px;
+    padding: 0 32px;
+  }
+  .cta-inner {
+    background: var(--paper-dark);
+    padding: 80px 60px;
+    border: 1px solid var(--rule);
+    text-align: center;
+    position: relative;
+  }
+  .cta-inner::before,
+  .cta-inner::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--accent);
+  }
+  .cta-inner::before { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+  .cta-inner::after { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+  .cta-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .cta-text {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.9;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    border: 1px solid var(--ink);
+    transition: all 0.3s;
+  }
+  .cta-button:hover { background: var(--accent); border-color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 32px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 900px) {
+    .mece-chapters { grid-template-columns: 1fr; }
+    .case-card { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
+    .case-data { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 24px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .hero-title { font-size: 48px; }
+    .section-title { font-size: 24px; }
+    .cta-inner { padding: 40px 24px; }
+    .matrix { font-size: 10px; }
+    .matrix td { padding: 8px 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="index.html" style="text-decoration:none;color:inherit;display:flex;gap:24px;align-items:center;">
+      <span class="topbar-logo">東大卒会計士の不動産投資攻略書</span>
+      <span class="topbar-meta mono">by さとうみいた / VOL.01 / 2026</span>
+    </a>
+  </div>
+  <div class="topbar-nav mono">
+    <a href="#map">体系図</a>
+    <a href="#cases">事例</a>
+    <a href="#">著者</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">東大卒会計士 × 不動産投資 / REAL ESTATE CODEX</div>
+  <h1 class="hero-title mincho">
+    <span class="line-1"><span class="nowrap">東京で、<span class="accent">勝つ</span>。</span></span>
+    <span class="line-2"><span class="nowrap">東大卒会計士が書く、</span></span>
+    <span class="line-3"><span class="nowrap">不動産投資の攻略書。</span></span>
+  </h1>
+  <p class="hero-subtitle mincho">
+    10年・6棟・総資産10億円の実体験から逆算した、<br>
+    都内・一棟アパートに特化した、体系的な攻略Wiki。<br>
+    健美家でも、楽待でも、書籍でも教えてくれない知。
+  </p>
+
+  <div class="author-hero">
+    <div class="author-hero-avatar mincho">佐</div>
+    <div class="author-hero-info">
+      <div class="author-hero-name mincho">さとうみいた</div>
+      <div class="author-hero-title mono">40歳 / 東大卒 / 公認会計士 / 不動産投資歴10年</div>
+      <div class="author-hero-desc">
+        大手プロフェッショナルファームで M&A アドバイザリー業務に従事する現役会計士。<br>
+        30歳で不動産投資を開始し、都内6棟・総資産10億円のポートフォリオを構築。<br>
+        2027年末の完全FIRE（セミリタイア移行）に向けて、最後の取得を進めている。
+      </div>
+      <div class="author-hero-links mono">
+        <a href="#">▶ YouTube</a>
+        <a href="#">✕ X (Twitter)</a>
+        <a href="#">✉ Mail</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num mincho">08</div>
+      <div class="stat-label">CHAPTERS</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num mincho">142</div>
+      <div class="stat-label">ENTRIES</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num mincho">23</div>
+      <div class="stat-label">CASE STUDIES</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num mincho">10<span style="font-size:16px">yr</span></div>
+      <div class="stat-label">EXPERIENCE</div>
+    </div>
+  </div>
+</section>
+
+<!-- MECE MAP -->
+<div id="map" class="section-header">
+  <span class="section-num mono">§01</span>
+  <h2 class="section-title mincho">体系図</h2>
+  <span class="section-sub mono">MECE FRAMEWORK MAP</span>
+</div>
+
+<div class="mece-intro">
+  <p class="mece-intro-text mincho">
+    不動産投資の知識は、断片的なブログ記事の寄せ集めでは身につかない。<br>
+    本サイトは8つの章それぞれを <strong>MECE なフレームワーク</strong> として設計している。<br>
+    各セルが1記事に対応し、領域全体を俯瞰できるマトリクスがここにある。
+  </p>
+  <div class="mece-legend">
+    <div class="legend-item"><span class="legend-dot done"></span>公開済</div>
+    <div class="legend-item"><span class="legend-dot progress"></span>執筆中</div>
+    <div class="legend-item"><span class="legend-dot empty"></span>未公開</div>
+  </div>
+</div>
+
+<div class="mece-chapters">
+
+  <!-- CH.01 融資 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">融</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.01</div>
+        <h3 class="mece-chapter-title mincho">融資攻略</h3>
+        <span class="mece-framework mono">銀行種別 × 評価方式</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">4<span class="total">/12</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>積算評価</th><th>資金収支</th><th>共同担保</th></tr>
+      <tr>
+        <th class="row-label">メガバンク</th>
+        <td class="cell-done"><span class="cell-dot"></span>MUFG/みずほ</td>
+        <td class="cell-progress"><span class="cell-dot"></span>SMBC</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+      <tr>
+        <th class="row-label">地銀</th>
+        <td class="cell-done"><span class="cell-dot"></span>横浜・千葉</td>
+        <td class="cell-done"><span class="cell-dot"></span>千葉・きらぼし</td>
+        <td class="cell-progress"><span class="cell-dot"></span>静岡</td>
+      </tr>
+      <tr>
+        <th class="row-label">信金・信組</th>
+        <td class="cell-empty"><span class="cell-dot"></span>西武信金</td>
+        <td class="cell-empty"><span class="cell-dot"></span>城北信金</td>
+        <td class="cell-empty"><span class="cell-dot"></span>朝日信金</td>
+      </tr>
+      <tr>
+        <th class="row-label">ノンバンク</th>
+        <td class="cell-empty"><span class="cell-dot"></span>オリックス</td>
+        <td class="cell-empty"><span class="cell-dot"></span>SBJ</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.02 物件 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">物</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.02</div>
+        <h3 class="mece-chapter-title mincho">物件選定</h3>
+        <span class="mece-framework mono">築年 × 構造</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">3<span class="total">/9</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>新築</th><th>中古(〜15年)</th><th>築古(15年〜)</th></tr>
+      <tr>
+        <th class="row-label">木造</th>
+        <td class="cell-done"><span class="cell-dot"></span>新築木造アパート</td>
+        <td class="cell-progress"><span class="cell-dot"></span>中古木造</td>
+        <td class="cell-empty"><span class="cell-dot"></span>築古木造</td>
+      </tr>
+      <tr>
+        <th class="row-label">鉄骨造</th>
+        <td class="cell-done"><span class="cell-dot"></span>新築鉄骨</td>
+        <td class="cell-empty"><span class="cell-dot"></span>中古鉄骨</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+      <tr>
+        <th class="row-label">RC造</th>
+        <td class="cell-empty"><span class="cell-dot"></span>新築RC</td>
+        <td class="cell-done"><span class="cell-dot"></span>中古RC</td>
+        <td class="cell-empty"><span class="cell-dot"></span>旧耐震RC</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.03 エリア -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">地</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.03</div>
+        <h3 class="mece-chapter-title mincho">エリア分析</h3>
+        <span class="mece-framework mono">エリア × 評価指標</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">5<span class="total">/20</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>地価動向</th><th>人口動態</th><th>再開発</th><th>利回り</th></tr>
+      <tr>
+        <th class="row-label">都心5区</th>
+        <td class="cell-done"><span class="cell-dot"></span>+</td>
+        <td class="cell-done"><span class="cell-dot"></span>+</td>
+        <td class="cell-done"><span class="cell-dot"></span>+</td>
+        <td class="cell-progress"><span class="cell-dot"></span>+</td>
+      </tr>
+      <tr>
+        <th class="row-label">城北・城東</th>
+        <td class="cell-done"><span class="cell-dot"></span>+</td>
+        <td class="cell-progress"><span class="cell-dot"></span>+</td>
+        <td class="cell-empty"><span class="cell-dot"></span>+</td>
+        <td class="cell-empty"><span class="cell-dot"></span>+</td>
+      </tr>
+      <tr>
+        <th class="row-label">23区外</th>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+      <tr>
+        <th class="row-label">地方</th>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-progress"><span class="cell-dot"></span>警告</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-progress"><span class="cell-dot"></span>警告</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.04 税務 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">税</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.04</div>
+        <h3 class="mece-chapter-title mincho">税務戦略</h3>
+        <span class="mece-framework mono">所有形態 × フェーズ</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">2<span class="total">/12</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>取得時</th><th>保有時</th><th>売却時</th><th>相続時</th></tr>
+      <tr>
+        <th class="row-label">個人</th>
+        <td class="cell-done"><span class="cell-dot"></span>登録免許</td>
+        <td class="cell-progress"><span class="cell-dot"></span>減価償却</td>
+        <td class="cell-empty"><span class="cell-dot"></span>長期/短期</td>
+        <td class="cell-empty"><span class="cell-dot"></span>相続評価</td>
+      </tr>
+      <tr>
+        <th class="row-label">法人</th>
+        <td class="cell-empty"><span class="cell-dot"></span>法人設立</td>
+        <td class="cell-done"><span class="cell-dot"></span>役員報酬</td>
+        <td class="cell-empty"><span class="cell-dot"></span>事業譲渡</td>
+        <td class="cell-empty"><span class="cell-dot"></span>株式承継</td>
+      </tr>
+      <tr>
+        <th class="row-label">個人→法人</th>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>タイミング</td>
+        <td class="cell-empty"><span class="cell-dot"></span>法人化譲渡</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.05 建築 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">建</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.05</div>
+        <h3 class="mece-chapter-title mincho">建築・施工</h3>
+        <span class="mece-framework mono">工程 × リスク</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">3<span class="total">/16</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>コスト</th><th>品質</th><th>工期</th><th>法規</th></tr>
+      <tr>
+        <th class="row-label">業者選定</th>
+        <td class="cell-done"><span class="cell-dot"></span>見積比較</td>
+        <td class="cell-progress"><span class="cell-dot"></span>施工実績</td>
+        <td class="cell-empty"><span class="cell-dot"></span>納期</td>
+        <td class="cell-empty"><span class="cell-dot"></span>許認可</td>
+      </tr>
+      <tr>
+        <th class="row-label">契約</th>
+        <td class="cell-done"><span class="cell-dot"></span>値引き交渉</td>
+        <td class="cell-done"><span class="cell-dot"></span>特約条項</td>
+        <td class="cell-empty"><span class="cell-dot"></span>遅延違約金</td>
+        <td class="cell-empty"><span class="cell-dot"></span>解除権</td>
+      </tr>
+      <tr>
+        <th class="row-label">確認・竣工</th>
+        <td class="cell-empty"><span class="cell-dot"></span>追加費用</td>
+        <td class="cell-empty"><span class="cell-dot"></span>検査</td>
+        <td class="cell-empty"><span class="cell-dot"></span>引渡し</td>
+        <td class="cell-empty"><span class="cell-dot"></span>建築確認</td>
+      </tr>
+      <tr>
+        <th class="row-label">アフター</th>
+        <td class="cell-empty"><span class="cell-dot"></span>修繕</td>
+        <td class="cell-empty"><span class="cell-dot"></span>瑕疵</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.06 運営 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">運</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.06</div>
+        <h3 class="mece-chapter-title mincho">運営・管理</h3>
+        <span class="mece-framework mono">機能 × 費用項目</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">1<span class="total">/12</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>売上</th><th>費用</th><th>リスク</th></tr>
+      <tr>
+        <th class="row-label">客付け</th>
+        <td class="cell-done"><span class="cell-dot"></span>家賃設定</td>
+        <td class="cell-empty"><span class="cell-dot"></span>AD・広告費</td>
+        <td class="cell-empty"><span class="cell-dot"></span>空室</td>
+      </tr>
+      <tr>
+        <th class="row-label">管理</th>
+        <td class="cell-empty"><span class="cell-dot"></span>家賃回収</td>
+        <td class="cell-empty"><span class="cell-dot"></span>管理料</td>
+        <td class="cell-empty"><span class="cell-dot"></span>滞納</td>
+      </tr>
+      <tr>
+        <th class="row-label">修繕</th>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>修繕積立</td>
+        <td class="cell-empty"><span class="cell-dot"></span>大規模修繕</td>
+      </tr>
+      <tr>
+        <th class="row-label">保険</th>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>火災・地震</td>
+        <td class="cell-empty"><span class="cell-dot"></span>災害</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.07 出口 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">出</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.07</div>
+        <h3 class="mece-chapter-title mincho">出口戦略</h3>
+        <span class="mece-framework mono">保有期間 × 売却方式</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">2<span class="total">/9</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>一般売却</th><th>買取</th><th>賃貸継続</th></tr>
+      <tr>
+        <th class="row-label">〜5年(短期)</th>
+        <td class="cell-done"><span class="cell-dot"></span>短期譲渡</td>
+        <td class="cell-empty"><span class="cell-dot"></span>即金</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+      </tr>
+      <tr>
+        <th class="row-label">5〜10年</th>
+        <td class="cell-done"><span class="cell-dot"></span>長期譲渡</td>
+        <td class="cell-empty"><span class="cell-dot"></span>法人買取</td>
+        <td class="cell-empty"><span class="cell-dot"></span>継続保有</td>
+      </tr>
+      <tr>
+        <th class="row-label">10年〜</th>
+        <td class="cell-progress"><span class="cell-dot"></span>減価償却切れ</td>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>相続</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+  <!-- CH.08 生涯 -->
+  <div class="mece-chapter">
+    <div class="mece-chapter-head">
+      <div class="mece-kanji mincho">生</div>
+      <div class="mece-chapter-title-wrap">
+        <div class="mece-num mono">CH.08</div>
+        <h3 class="mece-chapter-title mincho">生涯収支</h3>
+        <span class="mece-framework mono">ライフステージ × CF</span>
+      </div>
+      <div class="mece-progress">
+        <div class="mece-progress-num mincho">3<span class="total">/12</span></div>
+        <div>記事</div>
+      </div>
+    </div>
+    <table class="matrix">
+      <tr><th class="corner"></th><th>収入</th><th>支出</th><th>資産</th></tr>
+      <tr>
+        <th class="row-label">蓄積期(〜45)</th>
+        <td class="cell-done"><span class="cell-dot"></span>給与+家賃</td>
+        <td class="cell-progress"><span class="cell-dot"></span>教育費</td>
+        <td class="cell-done"><span class="cell-dot"></span>物件追加</td>
+      </tr>
+      <tr>
+        <th class="row-label">FIRE期(45〜60)</th>
+        <td class="cell-done"><span class="cell-dot"></span>副業+家賃</td>
+        <td class="cell-empty"><span class="cell-dot"></span>生活費月100</td>
+        <td class="cell-empty"><span class="cell-dot"></span>売却CF</td>
+      </tr>
+      <tr>
+        <th class="row-label">引退期(60〜)</th>
+        <td class="cell-empty"><span class="cell-dot"></span>年金+家賃</td>
+        <td class="cell-empty"><span class="cell-dot"></span>医療費</td>
+        <td class="cell-empty"><span class="cell-dot"></span>相続準備</td>
+      </tr>
+      <tr>
+        <th class="row-label">承継期</th>
+        <td class="cell-empty"><span class="cell-dot"></span>—</td>
+        <td class="cell-empty"><span class="cell-dot"></span>贈与税</td>
+        <td class="cell-empty"><span class="cell-dot"></span>事業承継</td>
+      </tr>
+    </table>
+    <a href="#" class="mece-chapter-link mono">VIEW CHAPTER →</a>
+  </div>
+
+</div>
+
+<!-- CASE STUDY -->
+<div id="cases" class="section-header">
+  <span class="section-num mono">§02</span>
+  <h2 class="section-title mincho">実戦事例</h2>
+  <span class="section-sub mono">NUMBERS TELL THE TRUTH</span>
+</div>
+
+<section class="case-study">
+  <div class="case-card">
+    <div>
+      <div class="case-label">CASE STUDY / 04</div>
+      <h3 class="case-title mincho">都内新築一棟アパート、<br>値引き900万円交渉の全記録。</h3>
+      <p class="case-desc">
+        12戸・鉄骨造・総額3.0億円の都内新築一棟アパート。<br>
+        売主・仲介・設計の三者構造を理解し、<br>
+        手数料の再配分ロジックから値引きを引き出した交渉プロセス。<br>
+        特約条項・建築確認・工事費超過時の解除権まで、契約書を全解剖する。
+      </p>
+      <a href="article-01.html" class="case-link mono">READ FULL CASE →</a>
+    </div>
+    <div class="case-data">
+      <div class="data-row">
+        <span class="data-label">物件総額</span>
+        <span class="data-value mincho">3.0<span class="small">億円</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">融資</span>
+        <span class="data-value mincho">30<span class="small">年 / 1.6%</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">値引き</span>
+        <span class="data-value mincho" style="color:var(--accent-soft)">−900<span class="small">万円</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">満室家賃</span>
+        <span class="data-value mincho">111<span class="small">万/月</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-inner">
+    <h2 class="cta-title mincho">実録をYouTubeで、体系をここで。</h2>
+    <p class="cta-text">
+      実録と日々の記録はYouTubeで、体系化された知はこの攻略書で。<br>
+      動画では追えない構造的な知識を、ここに集約していく。<br>
+      更新は毎週。失敗しないための、最短ルート。
+    </p>
+    <a href="#" class="cta-button">無料で購読する →</a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 東大卒会計士の不動産投資攻略書 / by さとうみいた</div>
+  <div>YouTube「東大卒会計士の不動産投資日記」と連携</div>
+</footer>
+
+</body>
+</html>
